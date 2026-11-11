@@ -1,1 +1,121 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ivory: #F5F0E8;
+  --color-sand: #E8DDCE;
+  --color-sand-light: #FBF8F4;
+  --color-sand-dark: #D4C4AE;
+  --color-emerald-deep: #174D3A;
+  --color-forest: #102F27;
+  --color-forest-dark: #0A1E19;
+  --color-forest-night: #061411;
+  --color-champagne: #C6A66B;
+  --color-champagne-light: #E0C79B;
+  --color-champagne-dark: #9E7D42;
+  --color-charcoal: #252823;
+  --color-charcoal-muted: #565A52;
+
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-display: 'Urbanist', 'Tenor Sans', system-ui, sans-serif;
+  --font-serif: 'Tenor Sans', 'Urbanist', sans-serif;
+}
+
+/* Base smoothing and modern luxury typography */
+html {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  background-color: #F5F0E8;
+  color: #252823;
+  scroll-behavior: smooth;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Urbanist', 'Tenor Sans', system-ui, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #102F27;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A66B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0C79B;
+}
+
+/* Moroccan Architectural Arch shapes */
+.moroccan-arch {
+  border-top-left-radius: 50% 35%;
+  border-top-right-radius: 50% 35%;
+}
+
+.moroccan-horseshoe {
+  clip-path: polygon(
+    0% 100%,
+    0% 35%,
+    10% 25%,
+    25% 12%,
+    50% 0%,
+    75% 12%,
+    90% 25%,
+    100% 35%,
+    100% 100%
+  );
+}
+
+/* Luxury gold gradient text & borders */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E0C79B 0%, #C6A66B 50%, #9E7D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #E0C79B 0%, #C6A66B 50%, #9E7D42 100%) 1;
+}
+
+/* Moroccan geometric lattice pattern overlay */
+.bg-moroccan-pattern {
+  background-image: radial-gradient(#C6A66B 0.75px, transparent 0.75px), radial-gradient(#C6A66B 0.75px, #102F27 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-moroccan-light-pattern {
+  background-image: radial-gradient(rgba(198, 166, 107, 0.25) 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Subtle floating animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 7s ease-in-out infinite;
+}
+
+@keyframes water-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.04);
+  }
+}
+
+.animate-water-pulse {
+  animation: water-pulse 8s ease-in-out infinite;
+}
